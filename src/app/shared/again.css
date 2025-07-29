@@ -1,0 +1,36 @@
+
+
+
+
+table{ 
+
+border-collapse:collapse; 
+margin-top:1rem; 
+
+
+}
+
+td, th{ 
+border:1px solid black; 
+padding-right:2rem;
+text-align:left; 
+padding-top:.25rem; 
+}
+
+
+.container-players{ 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

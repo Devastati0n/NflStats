@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Team {
+  id         String @id 
+  name       String
+  logoUrl    String
+  conference String
+  division   String
+
+  players Player[] // One-to-many: a team has many players
+}
+
+model Player {
+  id            String  @id @default(cuid())
+  name          String
+  imageFileName String?
+  position      String
+  number        Int
+  teamId        String
+  team          Team    @relation(fields: [teamId], references: [id])
+  overall       Int
+
+  stats PlayerStats? @relation("PlayerToStats")
+}
+
+model PlayerStats {
+  id       String @id @default(cuid())
+  playerId String @unique
+  player   Player @relation("PlayerToStats", fields: [playerId], references: [id])
+
+  gamesPlayed    Int?
+  tackles        Int?
+  solo           Int?
+  assisted       Int?
+  sack           Int?
+  forcedFumble   Int?
+  fumbleRecovery Int?
+  interception   Int?
+  passDeflected  Int?
+}
+

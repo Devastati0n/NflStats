@@ -1,0 +1,51 @@
+
+.division-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two divisions per row */
+  gap: 2rem;
+  padding: 2rem 5rem;
+}
+
+.teams-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Four teams per row */
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.images2 {
+  width: 60px;
+  height: 60px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .division-grid {
+    grid-template-columns: 1fr; /* Stack divisions on small screens */
+  }
+
+  .teams-list {
+    grid-template-columns: repeat(2, 1fr); /* Only 2 logos per row on small screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

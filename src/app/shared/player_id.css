@@ -1,0 +1,98 @@
+
+
+
+.flex-container{ 
+display:flex;  
+justify-content:center; 
+width:100%;
+max-width:640px; 
+margin:0 auto;  
+padding:1rem; 
+box-sizing:border-box; 
+
+}
+
+/* Text of player-stats*/
+.data-container{ 
+
+padding:0 1rem;
+
+}
+
+/* end */
+
+.playerstats-image-container {
+  position: relative;        /* Required for next/image fill */
+  flex: 0 0 120px;           /* fixed width container, won't grow or shrink */
+  aspect-ratio: 1 / 1;       /* keep it square */
+  overflow: hidden;
+  border-radius: 0.5rem;
+  min-width: 50px;
+
+}
+
+
+.top-line{ 
+width: 100%;
+height: 0;
+border-top: 2px solid rgba(138, 43, 226,.5);
+
+}
+
+/*player-stats nav */ 
+.tab-nav {
+  display:flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+}
+
+
+.tab-nav button {
+  padding: 0.5rem 1rem;
+  border: .1rem solid rgba(138, 43, 226,.5); 
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.tab-nav button:hover {
+  background-color: #315cc9;
+}
+
+/*player-stats end */ 
+
+.player-tab-container {
+  padding: 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 800px;
+  margin:0 auto;
+  box-sizing: border-box;
+  
+}
+
+
+
+
+@media (min-width: 600px) {
+ .data-container{ 
+font-size:1rem; 
+
+}
+.tab-nav{ 
+font-size:1rem; 
+
+}
+}
+
+
+
+
+
+
+

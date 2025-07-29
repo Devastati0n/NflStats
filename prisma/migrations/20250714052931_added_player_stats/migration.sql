@@ -1,0 +1,11 @@
+-- AlterTable
+ALTER TABLE "Player" ADD COLUMN "assisted" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "extraPoints" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "forcedFumble" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "fumbleRecovery" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "gamesPlayed" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "interception" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "passDeflected" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "sack" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "solo" INTEGER;
+ALTER TABLE "Player" ADD COLUMN "tackles" INTEGER;
